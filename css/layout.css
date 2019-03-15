@@ -94,7 +94,7 @@ body button:focus {
 }
 body input:focus,
 body select:focus {
-  box-shadow: 0 0 0 0.2rem rgba(161, 196, 90, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(30, 116, 218, 0.5);
 }
 
 body .overlay-menu {
@@ -130,7 +130,7 @@ body .overlay-menu.overlay-in {
   background: #252525;
 }
 .pagination .page-item .page-link:hover, .pagination .page-item .page-link:focus, .pagination .page-item .page-link.active {
-  background: #A1C45A;
+  background: #1E74DA;
   color: white;
 }
 
@@ -156,10 +156,10 @@ body .overlay-menu.overlay-in {
   padding-right: 15px;
 }
 .bread-crumb .breadcrumb .breadcrumb-item:hover {
-  color: #A1C45A;
+  color: #1E74DA;
 }
 .bread-crumb .breadcrumb .breadcrumb-item.active {
-  color: #A1C45A;
+  color: #1E74DA;
 }
 
 .footer {
@@ -180,7 +180,7 @@ body .overlay-menu.overlay-in {
 }
 .footer ul li i {
   margin-right: 10px;
-  color: #A1C45A;
+  color: #1E74DA;
   font-size: 14px;
 }
 .footer ul li a {
@@ -188,7 +188,7 @@ body .overlay-menu.overlay-in {
   transition: 0.3s;
 }
 .footer ul li a:hover {
-  color: #A1C45A;
+  color: #1E74DA;
 }
 .footer i {
   font-size: 20px;
@@ -196,7 +196,7 @@ body .overlay-menu.overlay-in {
   transition: 0.3s;
 }
 .footer i:hover {
-  color: #A1C45A;
+  color: #1E74DA;
 }
 .footer .social ul {
   margin-top: 15px;
@@ -258,7 +258,7 @@ body .overlay-menu.overlay-in {
   transition: 0.5s;
 }
 .menu .main-menu .nav li .active {
-  color: #A1C45A;
+  color: #1E74DA;
 }
 .menu .main-menu .nav li a {
   font-weight: 600;
@@ -266,7 +266,7 @@ body .overlay-menu.overlay-in {
   transition: 0.5s;
 }
 .menu .main-menu .nav li a:hover {
-  color: #A1C45A;
+  color: #1E74DA;
 }
 .menu .main-menu .cart-btn {
   float: right;
@@ -276,7 +276,7 @@ body .overlay-menu.overlay-in {
   transition: 0.3s;
 }
 .menu .main-menu .cart-btn:hover {
-  color: #A1C45A;
+  color: #1E74DA;
 }
 .menu .main-menu .cart-btn:hover span {
   background: black;
@@ -284,7 +284,7 @@ body .overlay-menu.overlay-in {
 .menu .main-menu .cart-btn span {
   width: 12px;
   height: 12px;
-  background: #A1C45A;
+  background: #1E74DA;
   color: white;
   font-size: 8px;
   line-height: 12px;
@@ -308,7 +308,7 @@ body .overlay-menu.overlay-in {
 }
 .menu .slider .owl-theme .owl-nav button.owl-prev:hover,
 .menu .slider .owl-theme .owl-nav button.owl-next:hover {
-  color: #A1C45A;
+  color: #1E74DA;
   background: none;
 }
 .menu .slider .owl-theme .owl-nav button.owl-prev:focus,
@@ -394,7 +394,7 @@ body .overlay-menu.overlay-in {
     font-weight: 500;
   }
   .menu .main-menu .nav li .active {
-    border-bottom: 1px solid #A1C45A;
+    border-bottom: 1px solid #1E74DA;
     background: none;
   }
   .menu .slider {

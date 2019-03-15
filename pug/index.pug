@@ -4,7 +4,7 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title Siêu thị ghế văn phòng Thanh Thúy
+    title TRÍ VIỆT
     link(rel='stylesheet', href='../css/bootstrap.min.css')
     link(rel='stylesheet', href='../css/mdb.min.css')
     link(rel='stylesheet', href='../css/owl.carousel.min.css')
@@ -14,6 +14,78 @@ html(lang="en")
     link(rel='stylesheet', href='../css/index.css')
     link(rel='shortcut icon', href='../img/favicon.png')
   body
+    ul.pagination
+      li
+        a.active(href='#about')
+          span.hover-text Giới thiệu
+      li
+        a(href='#design')
+          span.hover-text Thiết kế website
+      li
+        a(href='#seo')
+          span.hover-text Quảng cáo website
+      li
+        a(href='#hosting')
+          span.hover-text Tên miền - Hosting
+      li
+        a(href='#template')
+          span.hover-text Mẫu website
+      li
+        a(href='#contact')
+          span.hover-text Liên hệ
+    
+    .menu
+      a.toggleMenu.ssm-toggle-nav
+        i.mdi.mdi-menu
+      ul.nav
+        .nav-close
+          i.mdi.mdi-close.d-block.d-sm-none
+        li.nav-item
+          a(href='index.html') Trang chủ
+        li.nav-item
+          a(href='gioi-thieu.html') GIỚI THIỆU
+        li.nav-item
+          a(href='thiet-ke-website.html') THIẾT KẾ WEBSITE
+        li.nav-item
+          a(href='ten-mien.html') tên miền
+        li.nav-item
+          a(href='hosting.html') hosting
+        li.nav-item
+          a(href='email.html') email
+        li.nav-item
+          a(href='quang-cao-website.html') quảng cáo website
+        li.nav-item
+          a(href='mau-website.html') mẫu website
+        li.nav-item
+          a(href='lien-he.html') liên hệ
+      
+      .logo
+        img(src='../img/logo.png')
+      
+      .order
+        a(href='#contact') Đặt làm web ngay
+      
+
+
+    section.one-page.about(data-section-name="about")
+      h1.text-center hello
+
+    section.one-page.design(data-section-name="design")
+      h1.text-center hello
+
+    section.one-page.seo(data-section-name="seo")
+      h1.text-center hello
+
+    section.one-page.hosting(data-section-name="hosting")
+      h1.text-center hello
+
+    section.one-page.template(data-section-name="template")
+      h1.text-center hello
+
+    section.one-page.contact(data-section-name="contact")
+      h1.text-center hello
+
+    
 
 
     script(src='../js/jquery-3.3.1.min.js')
@@ -22,4 +94,5 @@ html(lang="en")
     script(src='../js/owl.carousel.min.js')
     script(src='../js/jquery.scrollify.js')
     script(src='../js/jquery-image-scroll.js')
+    script(src='../js/wow.min.js')
     script(src='../js/index.js')

@@ -17,23 +17,62 @@ $('.template-carousel').owlCarousel({
   autoplaySpeed: 1000,
 });
 
+wow = new WOW(
+  {
+  mobile: true,
+  }
+)
+wow.init();
+
 $(document).ready(() => {
   const windowWidth = document.body.clientWidth;
   const pageUrl = window.location.href;
 
-  
-  // GO TOP
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 300) {
-      $('.menu').addClass('down animated slideInDown');
-    } else {
-      $('.menu').removeClass('down animated slideInDown');
+  $.scrollify({
+    section : ".one-page",
+    sectionName : "section-name",
+    easing: "easeOutExpo",
+    scrollSpeed: 1000,
+    scrollbars: true,
+    setHeights: true,
+    overflowScroll: true,
+    updateHash: true,
+    touchScroll:true,
+    before:function(i,panels) {
 
+      var ref = panels[i].attr("data-section-name");
+
+      $(".pagination .active").removeClass("active");
+
+      $(".pagination").find("a[href=\"#" + ref + "\"]").addClass("active");
+    },
+    afterRender:function() {
+      var pagination = "<ul class=\"pagination\">";
+      var activeClass = "";
+      $(".one-page").each(function(i) {
+        activeClass = "";
+        if(i===0) {
+          activeClass = "active";
+        }
+        pagination += "<li><a class=\"" + activeClass + "\" href=\"#" + $(this).attr("data-section-name") + "\"><span class=\"hover-text\">" + $(this).attr("data-section-name").charAt(0).toUpperCase() + $(this).attr("data-section-name").slice(1) + "</span></a></li>";
+      });
+
+      pagination += "</ul>";
+
+      
+      
+
+      $(".pagination a").on("click",function() {
+        $.scrollify.move($(this).attr("href"));
+      });
+
+      $(".pagination a").on("click",$.scrollify.move);
     }
   });
+  
 
   $(".menu a").each( function () {
-    if (url == (this.href)) {
+    if (pageUrl == (this.href)) {
       $(this).closest("a").addClass("active");
     }
   });
@@ -56,4 +95,6 @@ $(document).ready(() => {
   $('.category-close').click(() => {
     $('.left').removeClass('active');
   });
+
+
 });
