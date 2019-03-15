@@ -1,0 +1,233 @@
+@import 'default';
+$main_color: #A1C45A;
+
+@mixin o1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+@mixin o2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+@mixin o3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+@mixin o4 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+@font-face {
+  font-family: "SF Display";
+  font-weight: 400;
+  src: url("../fonts/SF-UI-Display-Regular.otf");
+}
+
+@font-face {
+  font-family: "SF Display";
+  font-weight: 500;
+  src: url("../fonts/SF-UI-Display-Medium.otf");
+}
+
+@font-face {
+  font-family: "SF Display";
+  font-weight: 600;
+  src: url("../fonts/SF-UI-Display-Semibold.otf");
+}
+
+@font-face {
+  font-family: "SF Display";
+  font-weight: bold;
+  src: url("../fonts/SF-UI-Display-Bold.otf");
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'SF Display';
+  color: white;
+  margin: 0;
+  margin-right: 15px;
+  overflow-x: hidden;
+  font-weight: 400;
+  font-size: calc(9px + 0.4vmax);
+  background: none;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    margin: 0;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  h1 {
+    font-size: 2.1em;
+  }
+
+  h2 {
+    font-size: 1.75em;
+  }
+
+  h3 {
+    font-size: 1.4em
+  }
+
+  h4 {
+    font-size: 1.15em;
+  }
+
+  h5 {
+    font-size: 1em;
+  }
+
+  h6 {
+    font-size: 0.85em;
+  }
+
+  a {
+    outline: none;
+    text-decoration: none;
+    font-weight: 400;
+    color: inherit;
+  }
+
+  a:hover,
+  a:focus {
+    text-decoration: none;
+    color: inherit
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  img {
+    border: none;
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto
+  }
+
+  section {
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+  }
+
+
+  button:focus {
+    outline: none;
+  }
+
+  input:focus,
+  select:focus {
+    box-shadow: 0 0 0 0.2rem rgba($color: $main_color, $alpha: .5);
+  }
+}
+
+// end default css -----------------------------------------------------
+
+
+.menu {
+  z-index: 1000;
+  
+  &.down {
+    position: fixed;
+    width: 100%;
+    background: white;
+    top: 0;
+    right: 15px;
+    z-index: 1000;
+    box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16);
+  }
+
+  .main-menu {
+    position: relative;
+    border-top: 1px solid #e1e1e1;
+
+    .toggleMenu {
+      cursor: pointer;
+      display: none;
+      color: black;
+      margin: 10px 0;
+      z-index: 10000;
+      transition: 500ms;
+
+      i {
+        font-size: 26px;
+      }
+    }
+
+    .nav {
+      display: block;
+      margin: 15px 0;
+      text-align: center;
+
+      li {
+        padding: 0 15px;
+        transition: .5s;
+        display: inline-block;
+
+
+        i {
+          color: white;
+          padding-left: 5px;
+          font-size: 20px;
+          transition: .5s;
+        }
+
+        .active {
+          color: $main_color;
+        }
+
+        a {
+          font-weight: 600;
+          font-size: 15px;
+          transition: .5s;
+
+          &:hover {
+            color: $main_color;
+
+          }
+        }
+
+      }
+    }
+
+  }
+}
+
+.title-page {
+  h1 {
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+// --------------------------------------------------------------------
+
