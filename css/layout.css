@@ -88,6 +88,7 @@ body img {
 body section {
   margin-left: -15px !important;
   margin-right: -15px !important;
+  cursor: url("../img/cursor.png"), auto;
 }
 body button:focus {
   outline: none;

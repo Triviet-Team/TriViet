@@ -68,22 +68,247 @@ html(lang="en")
 
 
     section.one-page.about(data-section-name="about")
-      h1.text-center hello
+      .about-zone
+        h1.wow.fadeInUp CHÀO MỪNG BẠN ĐẾN VỚI
+        p.wow.fadeInUp(data-wow-delay=".3s") THIẾT KẾ WEBSITE TRÍ VIỆT
+        h4.wow.fadeInUp(data-wow-delay=".6s") Qua hơn 12 năm hình thành và phát triển, chúng tôi tự hào đã xây dựng khoảng hơn 500 trang web cho tất cả các lĩnh vực như: Kiến trúc - xây dựng, giáo dục, y tế, sản xuất thương mại và dịch vụ tại Việt Nam.
+
+        .service
+          .box-service.wow.bounceInUp(data-wow-delay="1s")
+            .box-service-img
+              img(src='../img/about-1.png')
+            h4 Thiết kế website với quy trình chuyên nghiệp
+          
+          .box-service.wow.bounceInUp(data-wow-delay="1.2s")
+            .box-service-img
+              img(src='../img/about-2.png')
+            h4 Tư vấn và cung cấp tên miền, hosting
+          
+          .box-service.wow.bounceInUp(data-wow-delay="1.4s")
+            .box-service-img
+              img(src='../img/about-3.png')
+            h4 Quảng cáo Website trên Google Adword
+
 
     section.one-page.design(data-section-name="design")
-      h1.text-center hello
+      .design-zone
+        .title-page.wow.flipInX
+          h1 THIẾT KẾ WEBSITE
+        .design-in
+          .progress-zone.wow.fadeIn(data-wow-delay='.5s')
+            h3 CÔNG NGHỆ CỦA CHÚNG TÔI SỬ DỤNG
+            p Etiam elementum euismod commodo. Proin eleifend eget quam ut efficitur. Mauris a accumsan mauris. Phasellus egestas et risus sit amet hendrerit. Nulla facilisi. Cras urna sem, vulputate sed condimentum a, posuere vel enim.
+
+            .box-progress
+              .skill
+                | ADOBE PHOTOSHOP & ADOBE XD
+                span 90%
+              .progress
+                .progress-bar(role='progressbar', style="width: 0"  aria-valuenow='90', aria-valuemin='0', aria-valuemax='100')
+            
+            .box-progress
+              .skill
+                | HTML5 & CSS3 (Responsive)
+                span 95%
+              .progress
+                .progress-bar(role='progressbar', style="width: 0"  aria-valuenow='95', aria-valuemin='0', aria-valuemax='100')
+            
+            .box-progress
+              .skill
+                | JAVASCRIPT (jQuery)
+                span 80%
+              .progress
+                .progress-bar(role='progressbar',  style="width: 0" aria-valuenow='80', aria-valuemin='0', aria-valuemax='100')
+            
+            .box-progress
+              .skill
+                | PHP
+                span 90%
+              .progress
+                .progress-bar(role='progressbar', style="width: 0"  aria-valuenow='90', aria-valuemin='0', aria-valuemax='100')
+
+          .design-right.wow.fadeInUp(data-wow-delay='3s')
+            .design-icon.design-icon-1
+              img(src='../img/design-1.png')
+              .design-detail
+                h5 
+                  a(href='thiet-ke-website.html') THIẾT KẾ WEBSITE TRỌN GÓI
+                h6 Duis mauris augue, eficitur eu arcu sit amet, posuere dignissim neque. Aenan eim sem, pharetra et magna sit amet, luctus alquet nibh. Curabitur auctor leo et libero consectetur gravida. Morbi gravida et sem dictum varius. Proin eget viverra sem, non euismod est. Aenean enim    
+            
+            .design-icon.design-icon-2
+              img(src='../img/design-2.png')
+              .design-detail
+                h5 
+                  a(href='thiet-ke-website.html') THIẾT KẾ WEBSITE THEO YÊU CẦU
+                h6 Duis mauris augue, eficitur eu arcu sit amet, posuere dignissim neque. Aenan eim sem, pharetra et magna sit amet, luctus alquet nibh. Curabitur auctor leo et libero consectetur gravida. Morbi gravida et sem dictum varius. Proin eget viverra sem, non euismod est. Aenean enim    
+            
+            .design-icon.design-icon-1
+              img(src='../img/design-3.png')
+              .design-detail
+                h5 
+                  a(href='thiet-ke-website.html') THIẾT KẾ WEBSITE BÁN HÀNG
+                h6 Duis mauris augue, eficitur eu arcu sit amet, posuere dignissim neque. Aenan eim sem, pharetra et magna sit amet, luctus alquet nibh. Curabitur auctor leo et libero consectetur gravida. Morbi gravida et sem dictum varius. Proin eget viverra sem, non euismod est. Aenean enim    
+
 
     section.one-page.seo(data-section-name="seo")
-      h1.text-center hello
+      .seo-zone
+        .title-page.wow.flipInX
+          h1 quảng cáo website
+        
+        .row
+          .col-lg-4
+            .box-seo.text-right.wow.fadeInUp(data-wow-delay='1s')
+              h5
+                span Quảng cáo Google Adwords là gì?
+                img(src='../img/icon-seo.png')
+              h6 Là dịch vụ quảng cáo trực tuyến của Google. Được khách hàng nhìn thấy vào đúng thời điểm họ đang tìm kiếm trên Google những thứ bạn cung cấp. Và chỉ trả tiền khi họ nhấp để truy cập trang web hoặc gọi cho bạn.
+              
+            .box-seo.text-right.wow.fadeInUp(data-wow-delay='1.3s')
+              h5
+                span Tại sao phải quảng cáo ?
+                img(src='../img/icon-seo.png')
+              h6 Quảng cáo Google Adwords giúp quý khách tăng cao về doanh số, tiếp cận nhanh tới các khách hàng tiềm năng. Thông qua Google Adwords, dịch vụ sản phẩm của quý khách luôn đứng trên trang 1 google.com, website với 95% người sử dụng internet dùng để tìm kiếm
+          
+          .col-lg-4.wow.fadeInUp(data-wow-delay='.5s')
+            img(src='../img/bg-seo.png')
+          
+          .col-lg-4
+            .box-seo.text-left.wow.fadeInUp(data-wow-delay='1.6s')
+              h5
+                img(src='../img/icon-seo.png')
+                span Lợi ích của Google Adwords là gì?
+              h6 Google Adwords sẽ giúp quảng cáo của bạn sẽ hiển thị ngay ở những vị trí đầu tiên trên trang kết quả khi khách hàng tìm kiếm từ khóa về sản phẩm/dịch vụ mà bạn cung cấp, hoặc xuất hiện trên các trang mạng khi người dùng lướt web mỗi ngày
+              
+            .box-seo.text-left.wow.fadeInUp(data-wow-delay='1.9s')
+              h5
+                img(src='../img/icon-seo.png')
+                span Chi phí quảng cáo cao không ?
+              h6 Google Adwords không tính phí bạn cho việc hiển thị quảng cáo. Thay vào đó, bạn chỉ trả tiền khi có người nhấp vào quảng cáo của bạn, Nhấp vào website hoặc gọi cho doanh nghiệp của bạn.
+
+        .seo-all.text-center.wow.fadeIn(data-wow-delay='2.5s')
+          a(href='quang-cao-website.html') Xem chi tiết ngay
+
 
     section.one-page.hosting(data-section-name="hosting")
-      h1.text-center hello
+      .hosting-img
+        img(src='../img/bg-hosting.png')
+      .domain-btn
+        h1(title='Nhấp để tìm hiểu') Tên miền
+        img(src='../img/click.gif')
+      .hosting-btn
+        h1(title='Nhấp để tìm hiểu') Hosting
+        img(src='../img/click.gif')
+      
+      .hosting-zone
+        .left.active
+          .box-hosting
+            h1 dịch vụ đăng ký tên miền
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus fugiat excepturi dolores reprehenderit doloribus laborum, culpa dolor, nostrum tempore assumenda perferendis voluptatem repudiandae itaque, iste corporis! Officiis harum ducimus exercitationem?
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus fugiat excepturi dolores reprehenderit doloribus laborum, culpa dolor, nostrum tempore assumenda perferendis voluptatem repudiandae itaque, iste corporis! Officiis harum ducimus exercitationem?
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus fugiat excepturi dolores reprehenderit doloribus laborum, culpa dolor, nostrum tempore assumenda perferendis voluptatem repudiandae itaque, iste corporis! Officiis harum ducimus exercitationem?
+            .box-hosting-btn     
+              a(href='ten-mien.html') Tìm hiểu rõ hơn
+        
+        .right
+          .box-hosting
+            h1 dịch vụ đăng ký hosting
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus fugiat excepturi dolores reprehenderit doloribus laborum, culpa dolor, nostrum tempore assumenda perferendis voluptatem repudiandae itaque, iste corporis! Officiis harum ducimus exercitationem?
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus fugiat excepturi dolores reprehenderit doloribus laborum, culpa dolor, nostrum tempore assumenda perferendis voluptatem repudiandae itaque, iste corporis! Officiis harum ducimus exercitationem?
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus fugiat excepturi dolores reprehenderit doloribus laborum, culpa dolor, nostrum tempore assumenda perferendis voluptatem repudiandae itaque, iste corporis! Officiis harum ducimus exercitationem?
+            .box-hosting-btn
+              a(href='hosting.html') Tìm hiểu rõ hơn
+      
 
     section.one-page.template(data-section-name="template")
-      h1.text-center hello
+      .template-zone
+        .title-page
+          h1 MỘT SỐ MẪU WEBSITE NỔI BẬT
+
+        .owl-carousel.template-carousel.owl-theme
+          .item
+            .box-template
+              .box-template-mouse
+                img(src='../img/mouse.gif')
+              .box-template-img
+                a(href='http://acesport.net/', title='Nhấp để truy cập trang')
+                  img(src='../img/template-2.png')
+              .box-template-detail
+                h2 DIỄN ĐÀN ACE SPORT
+                h5 Website diễn đàn tennis
+          
+          .item
+            .box-template
+              .box-template-mouse
+                img(src='../img/mouse.gif')
+              .box-template-img
+                a(href='http://acesport.net/', title='Nhấp để truy cập trang')
+                  img(src='../img/template-1.png')
+              .box-template-detail
+                h2 DIỄN ĐÀN ACE SPORT
+                h5 Website diễn đàn tennis
+          
+          .item
+            .box-template
+              .box-template-mouse
+                img(src='../img/mouse.gif')
+              .box-template-img
+                a(href='http://acesport.net/', title='Nhấp để truy cập trang')
+                  img(src='../img/template-3.png')
+              .box-template-detail
+                h2 DIỄN ĐÀN ACE SPORT
+                h5 Website diễn đàn tennis          
+                    
+          .item
+            .box-template
+              .box-template-mouse
+                img(src='../img/mouse.gif')
+              .box-template-img
+                a(href='http://acesport.net/', title='Nhấp để truy cập trang')
+                  img(src='../img/template-1.png')
+              .box-template-detail
+                h2 DIỄN ĐÀN ACE SPORT
+                h5 Website diễn đàn tennis
+          
+          .item
+            .box-template
+              .box-template-mouse
+                img(src='../img/mouse.gif')
+              .box-template-img
+                a(href='http://acesport.net/', title='Nhấp để truy cập trang')
+                  img(src='../img/template-2.png')
+              .box-template-detail
+                h2 DIỄN ĐÀN ACE SPORT
+                h5 Website diễn đàn tennis
+
+        .template-all.text-center
+          a(href='mau-website.html') Xem tất cả mẫu
+
 
     section.one-page.contact(data-section-name="contact")
-      h1.text-center hello
+      .contact-zone 
+        .title-page
+          h1 LIÊN HỆ VỚI CHÚNG TÔI
+          h5 Nếu bạn có nhu cầu đặt làm website hoặc thắc mắc cần giải đáp
+        
+        form.text-center
+          input(type='text', placeholder='Họ tên')
+          input(type='text', placeholder='Số điện thoại')
+          input(type='text', placeholder='Email')
+          textarea(placeholder='Lời nhắn')
+          button.btn gửi liên hệ
+        
+        h6.text-center Hoặc liên hệ trực tiếp
+        ul 
+          li
+            i.mdi.mdi-map-marker-outline
+            | 311 K13 Đường 8, KP 1, P. An Phú, Q2, TP. HCM
+          li
+            i.mdi.mdi-deskphone
+            | 0917 681 909
+          li
+            i.mdi.mdi-email-outline
+            | kinhdoanh@triviet.net
+          
 
     
 
@@ -93,6 +318,5 @@ html(lang="en")
     script(src='../js/mdb.min.js')
     script(src='../js/owl.carousel.min.js')
     script(src='../js/jquery.scrollify.js')
-    script(src='../js/jquery-image-scroll.js')
     script(src='../js/wow.min.js')
     script(src='../js/index.js')

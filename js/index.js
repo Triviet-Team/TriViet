@@ -3,13 +3,11 @@ $('.template-carousel').owlCarousel({
   autoplay: true,
   autoplayTimeout: 5000,
   autoplayHoverPause: true,
-  dots: false,
-  nav: true,
-  items: 1,
-  center:true,
-  autoHeight: true,
-  animateOut: 'fadeOut',
-  animateIn: 'fadeIn',
+  dots: true,
+  nav: false,
+  items: 2,
+  center: true,
+  margin: 100,
   navText: [
     "<i class='mdi mdi-arrow-left'></i>", 
     "<i class='mdi mdi-arrow-right'></i>"
@@ -28,48 +26,46 @@ $(document).ready(() => {
   const windowWidth = document.body.clientWidth;
   const pageUrl = window.location.href;
 
-  $.scrollify({
-    section : ".one-page",
-    sectionName : "section-name",
-    easing: "easeOutExpo",
-    scrollSpeed: 1000,
-    scrollbars: true,
-    setHeights: true,
-    overflowScroll: true,
-    updateHash: true,
-    touchScroll:true,
-    before:function(i,panels) {
-
-      var ref = panels[i].attr("data-section-name");
-
-      $(".pagination .active").removeClass("active");
-
-      $(".pagination").find("a[href=\"#" + ref + "\"]").addClass("active");
-    },
-    afterRender:function() {
-      var pagination = "<ul class=\"pagination\">";
-      var activeClass = "";
-      $(".one-page").each(function(i) {
-        activeClass = "";
-        if(i===0) {
-          activeClass = "active";
-        }
-        pagination += "<li><a class=\"" + activeClass + "\" href=\"#" + $(this).attr("data-section-name") + "\"><span class=\"hover-text\">" + $(this).attr("data-section-name").charAt(0).toUpperCase() + $(this).attr("data-section-name").slice(1) + "</span></a></li>";
-      });
-
-      pagination += "</ul>";
-
-      
-      
-
-      $(".pagination a").on("click",function() {
-        $.scrollify.move($(this).attr("href"));
-      });
-
-      $(".pagination a").on("click",$.scrollify.move);
-    }
-  });
+  if (windowWidth > 1200) {
+    $.scrollify({
+      section : ".one-page",
+      sectionName : "section-name",
+      easing: "easeOutExpo",
+      scrollSpeed: 1000,
+      scrollbars: true,
+      setHeights: true,
+      overflowScroll: true,
+      updateHash: true,
+      touchScroll:true,
+      before:function(i,panels) {
+        var ref = panels[i].attr("data-section-name");
   
+        $(".pagination .active").removeClass("active");
+  
+        $(".pagination").find("a[href=\"#" + ref + "\"]").addClass("active");
+      },
+      afterRender:function() {
+        var pagination = "<ul class=\"pagination\">";
+        var activeClass = "";
+        $(".one-page").each(function(i) {
+          activeClass = "";
+          if(i===0) {
+            activeClass = "active";
+          }
+          pagination += "<li><a class=\"" + activeClass + "\" href=\"#" + $(this).attr("data-section-name") + "\"><span class=\"hover-text\">" + $(this).attr("data-section-name").charAt(0).toUpperCase() + $(this).attr("data-section-name").slice(1) + "</span></a></li>";
+        });
+  
+        pagination += "</ul>"; 
+  
+        $(".pagination a, .order a").on("click",function() {
+          $.scrollify.move($(this).attr("href"));
+        });
+  
+        $(".pagination a").on("click",$.scrollify.move);
+      }
+    });
+  }
+
 
   $(".menu a").each( function () {
     if (pageUrl == (this.href)) {
@@ -85,16 +81,28 @@ $(document).ready(() => {
   $('.overlay-menu, .nav-close').click(function() {
     $('.overlay-menu').removeClass('overlay-in');
     $('.nav').removeClass('out');
-    $('.left').removeClass('active');
   });
 
-  $('.category-btn').click(() => {
-    $('.left').addClass('active');
-  })
+  $(window).scroll( function () {
+    if ($(this).scrollTop() * 1.2 > ($('.design').position().top)) {
 
-  $('.category-close').click(() => {
-    $('.left').removeClass('active');
+      $('.progress-bar').css("width",
+        function() {
+          return $(this).attr("aria-valuenow") + "%";
+        }
+      )
+    }
   });
 
+  $('.hosting-btn').click(() => {
+    $('.hosting .right').addClass('active');
+    $('.hosting .left').removeClass('active');
+  });
+
+  $('.domain-btn').click(() => {
+    $('.hosting .left').addClass('active');
+    $('.hosting .right').removeClass('active');
+  });
 
 });
+
