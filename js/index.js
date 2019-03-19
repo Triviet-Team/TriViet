@@ -36,7 +36,7 @@ $(document).ready(() => {
       setHeights: true,
       overflowScroll: true,
       updateHash: true,
-      touchScroll:true,
+      touchScroll:false,
       before:function(i,panels) {
         var ref = panels[i].attr("data-section-name");
   
@@ -104,5 +104,12 @@ $(document).ready(() => {
     $('.hosting .right').removeClass('active');
   });
 
+  $('.box-template').hover(function() {
+    $.scrollify.disable();
+  });
+
+  $('.box-template').mouseleave(function() {
+    $.scrollify.enable();
+  });
 });
 

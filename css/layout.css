@@ -65,6 +65,7 @@ body a {
   text-decoration: none;
   font-weight: 400;
   color: inherit;
+  cursor: url("../img/pointer.png"), pointer;
 }
 body a:hover,
 body a:focus {
@@ -77,6 +78,7 @@ body ul {
 }
 body li {
   list-style: none;
+  cursor: url("../img/cursor.png"), auto;
 }
 body img {
   border: none;

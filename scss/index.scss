@@ -1,4 +1,4 @@
-@import 'default';
+
 $main_color: #1E74DA;
 
 @mixin o1 {
@@ -71,6 +71,7 @@ body {
   font-weight: 400;
   font-size: calc(10px + .6vh);
   background: none;
+  cursor: url('../img/cursor.png'), auto;
 
   h1, h2, h3, h4, h5, h6 {
     font-family: inherit;
@@ -108,12 +109,14 @@ body {
     text-decoration: none;
     font-weight: 400;
     color: inherit;
+    cursor: url('../img/pointer.png'), pointer;
   }
 
   a:hover,
   a:focus {
     text-decoration: none;
-    color: inherit
+    color: inherit;
+    cursor: url('../img/pointer.png'), pointer;
   }
 
   ul {
@@ -154,6 +157,7 @@ body {
 
   &::-webkit-scrollbar-track {
     background: #f1f1f1; 
+    
   }
   
   &::-webkit-scrollbar-thumb {
@@ -204,6 +208,7 @@ body {
     display: block;
     margin-right: 15px;
     border: 1px solid #ccc;
+    cursor: url('../img/pointer.png'), pointer;
 
     &:hover {
       background: none;
@@ -298,10 +303,11 @@ body {
 
 .logo {
   position: fixed;
-  height: 50px;
+  height: 70px;
   left: 30px;
   top: 10px;
   z-index: 1005;
+  cursor: url('../img/cursor.png'), auto;
 }
 
 .order {
@@ -495,7 +501,7 @@ body {
               font-size: 15px;
 
               &:hover {
-                color: white;
+                padding-left: 10px;
               }
             }
           }
@@ -596,7 +602,7 @@ body {
     top: 50%;
     left: 25%;
     transform: translate(-50%, -50%);
-    cursor: pointer;
+    cursor: url('../img/pointer.png'), pointer;
     transition: .3s;
 
     &:hover {
@@ -698,6 +704,10 @@ body {
     margin-bottom: 7vh;
   }
 
+  .owl-theme {
+    cursor: url('../img/hand.png'), auto;
+  }
+
   .owl-theme .owl-dots {
     position: absolute;
     top: -40px;
@@ -721,6 +731,7 @@ body {
         background: white;
         width: 12px;
         height: 12px;
+        cursor: url('../img/pointer.png'), pointer;
       }
     }
   }
@@ -729,6 +740,10 @@ body {
     &.active.center {
       .box-template {
         transform: translateY(0);
+        
+        &:active {
+          cursor: url('../img/scroll.png'), auto;
+        }
 
         &-mouse {
           opacity: 1;
@@ -760,16 +775,30 @@ body {
       .box-template-detail {
         opacity: 0;
       }
+
+      .box-template-mouse::before {
+        display: none;
+      }
     }
 
     &-mouse {
-      width: 50px;
-      height: 50px;
+      width: 100px;
+      height: 100px;
       position: absolute;
-      top: 15px;
-      right: -50px;
-      z-index: 1;
+      bottom: -25px;
+      right: calc(50% - 90px);
+      transform: translateX(-50%);
+      z-index: 2;
       opacity: 0;
+
+      &::before {
+        content: 'Cuộn xuống ngay!';
+        position: absolute;
+        top: 15px;
+        left: -7px;
+        width: 120px;
+        font-size: 14px;
+      }
     }
 
     &-img {
@@ -780,19 +809,23 @@ body {
       border: 10px solid white;
 
       &::-webkit-scrollbar {
-        width: 10px;
+        width: 15px;
+        cursor: url('../img/scroll.png'), auto;
       }
     
       &::-webkit-scrollbar-track {
         background: #ccc; 
+         cursor: url('../img/scroll.png'), auto;
       }
       
       &::-webkit-scrollbar-thumb {
         background: $main_color; 
+         cursor: url('../img/scroll.png'), auto;
       }
     
       &::-webkit-scrollbar-thumb:hover {
-        background: #555; 
+        background: #013675; 
+         cursor: url('../img/scroll.png'), auto;
       }
 
       img {
@@ -866,6 +899,7 @@ body {
       padding-left: 15px;
       color: white;
       font-size: 14px;
+      cursor: url('../img/text.png'), auto;
 
       &:nth-child(1) {
         border-left: 0;
@@ -898,6 +932,7 @@ body {
       padding: 15px;
       color: white;
       font-size: 14px;
+      cursor: url('../img/text.png'), auto;
 
       &::placeholder {
         color: #ccc;
@@ -919,7 +954,7 @@ body {
       color: white;
       text-transform: uppercase;
       font-weight: 500;
-      cursor: pointer;
+      cursor: url('../img/pointer.png'), pointer;
       font-size: 16px;
 
       &:hover {
