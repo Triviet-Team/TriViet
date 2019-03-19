@@ -97,11 +97,15 @@ $(document).ready(() => {
   $('.hosting-btn').click(() => {
     $('.hosting .right').addClass('active');
     $('.hosting .left').removeClass('active');
+    $('.logo-white').removeClass('d-none');
+    $('.logo-black').addClass('d-none');
   });
 
   $('.domain-btn').click(() => {
     $('.hosting .left').addClass('active');
     $('.hosting .right').removeClass('active');
+    $('.logo-black').removeClass('d-none');
+    $('.logo-white').addClass('d-none');
   });
 
   $('.box-template').hover(function() {
@@ -110,6 +114,20 @@ $(document).ready(() => {
 
   $('.box-template').mouseleave(function() {
     $.scrollify.enable();
+  });
+
+  $(window).scroll( function () {
+    if ($(this).scrollTop() == $('.hosting').position().top) {
+      $('.logo-black').removeClass('d-none');
+      $('.logo-white').addClass('d-none');
+      $('.hosting .left').addClass('active');
+      $('.hosting .right').removeClass('active');
+      $('.menu .nav li a').addClass('gray');
+    } else {
+      $('.logo-white').removeClass('d-none');
+      $('.logo-black').addClass('d-none');
+      $('.menu .nav li a').removeClass('gray');
+    }
   });
 });
 

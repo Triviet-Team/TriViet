@@ -208,9 +208,6 @@ body::-webkit-scrollbar-thumb:hover {
   transition: 0.5s;
   display: inline-block;
 }
-.menu .nav li .active {
-  color: #1E74DA;
-}
 .menu .nav li a {
   font-size: 14px;
   text-transform: uppercase;
@@ -218,6 +215,12 @@ body::-webkit-scrollbar-thumb:hover {
   color: white;
   padding: 0 15px;
   font-weight: 600;
+}
+.menu .nav li a.gray {
+  color: #999;
+}
+.menu .nav li a.active {
+  color: #1E74DA;
 }
 .menu .nav li a:hover {
   color: #1E74DA;

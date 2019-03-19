@@ -280,10 +280,6 @@ body {
       transition: .5s;
       display: inline-block;
 
-      .active {
-        color: $main_color;
-      }
-
       a {
         font-size: 14px;
         text-transform: uppercase;
@@ -292,9 +288,16 @@ body {
         padding: 0 15px;
         font-weight: 600;
 
+        &.gray {
+          color: #999;
+        }
+
+        &.active {
+          color: $main_color;
+        }
+
         &:hover {
           color: $main_color;
-
         }
       }
     }
