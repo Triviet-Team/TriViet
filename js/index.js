@@ -17,7 +17,7 @@ $('.template-carousel').owlCarousel({
 
 wow = new WOW(
   {
-  mobile: true,
+  mobile: false,
   }
 )
 wow.init();
@@ -26,44 +26,61 @@ $(document).ready(() => {
   const windowWidth = document.body.clientWidth;
   const pageUrl = window.location.href;
 
+  $.scrollify({
+    section : ".one-page",
+    sectionName : "section-name",
+    easing: "easeOutExpo",
+    scrollSpeed: 1000,
+    scrollbars: true,
+    setHeights: true,
+    overflowScroll: true,
+    updateHash: true,
+    touchScroll:false,
+    before:function(i,panels) {
+      var ref = panels[i].attr("data-section-name");
+
+      $(".pagination .active").removeClass("active");
+
+      $(".pagination").find("a[href=\"#" + ref + "\"]").addClass("active");
+    },
+    afterRender:function() {
+      var pagination = "<ul class=\"pagination\">";
+      var activeClass = "";
+      $(".one-page").each(function(i) {
+        activeClass = "";
+        if(i===0) {
+          activeClass = "active";
+        }
+        pagination += "<li><a class=\"" + activeClass + "\" href=\"#" + $(this).attr("data-section-name") + "\"><span class=\"hover-text\">" + $(this).attr("data-section-name").charAt(0).toUpperCase() + $(this).attr("data-section-name").slice(1) + "</span></a></li>";
+      });
+
+      pagination += "</ul>"; 
+
+      $(".pagination a, .order a").on("click",function() {
+        $.scrollify.move($(this).attr("href"));
+      });
+
+      $(".pagination a").on("click",$.scrollify.move);
+    }
+  });
+  
   if (windowWidth > 1200) {
-    $.scrollify({
-      section : ".one-page",
-      sectionName : "section-name",
-      easing: "easeOutExpo",
-      scrollSpeed: 1000,
-      scrollbars: true,
-      setHeights: true,
-      overflowScroll: true,
-      updateHash: true,
-      touchScroll:false,
-      before:function(i,panels) {
-        var ref = panels[i].attr("data-section-name");
-  
-        $(".pagination .active").removeClass("active");
-  
-        $(".pagination").find("a[href=\"#" + ref + "\"]").addClass("active");
-      },
-      afterRender:function() {
-        var pagination = "<ul class=\"pagination\">";
-        var activeClass = "";
-        $(".one-page").each(function(i) {
-          activeClass = "";
-          if(i===0) {
-            activeClass = "active";
-          }
-          pagination += "<li><a class=\"" + activeClass + "\" href=\"#" + $(this).attr("data-section-name") + "\"><span class=\"hover-text\">" + $(this).attr("data-section-name").charAt(0).toUpperCase() + $(this).attr("data-section-name").slice(1) + "</span></a></li>";
-        });
-  
-        pagination += "</ul>"; 
-  
-        $(".pagination a, .order a").on("click",function() {
-          $.scrollify.move($(this).attr("href"));
-        });
-  
-        $(".pagination a").on("click",$.scrollify.move);
-      }
+    $('.box-template').hover(function() {
+      $.scrollify.disable();
     });
+  
+    $('.box-template').mouseleave(function() {
+      $.scrollify.enable();
+    });
+  }
+  
+  if (windowWidth < 1200) {
+    $.scrollify({
+      setHeights: false,
+      overflowScroll: false,
+    });
+
+    $('.one-page').css('height', 'auto');
   }
 
 
@@ -108,13 +125,7 @@ $(document).ready(() => {
     $('.logo-white').addClass('d-none');
   });
 
-  $('.box-template').hover(function() {
-    $.scrollify.disable();
-  });
 
-  $('.box-template').mouseleave(function() {
-    $.scrollify.enable();
-  });
 
   $(window).scroll( function () {
     if ($(this).scrollTop() == $('.hosting').position().top) {

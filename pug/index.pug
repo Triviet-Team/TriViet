@@ -14,6 +14,7 @@ html(lang="en")
     link(rel='stylesheet', href='../css/index.css')
     link(rel='shortcut icon', href='../img/favicon.png')
   body
+    .overlay-menu
     ul.pagination
       li
         a.active(href='#about')
@@ -35,11 +36,11 @@ html(lang="en")
           span.hover-text Liên hệ
     
     .menu
-      a.toggleMenu.ssm-toggle-nav
+      .toggleMenu
         i.mdi.mdi-menu
       ul.nav
         .nav-close
-          i.mdi.mdi-close.d-block.d-sm-none
+          i.mdi.mdi-close
         li.nav-item
           a(href='index.html') Trang chủ
         li.nav-item
@@ -61,7 +62,7 @@ html(lang="en")
       
       .logo
         img.logo-white(src='../img/logo.png')
-        img.logo-black.d-none(src='../img/logo-black2.png')
+        img.logo-black.d-none(src='../img/logo-black.png')
       
       .order
         a(href='#contact') Đặt làm web ngay
@@ -157,7 +158,7 @@ html(lang="en")
           h1 quảng cáo website
         
         .row
-          .col-lg-4
+          .col-lg-4.col-sm-6
             .box-seo.text-right.wow.fadeInUp(data-wow-delay='1s')
               h5
                 span Quảng cáo Google Adwords là gì?
@@ -170,10 +171,10 @@ html(lang="en")
                 img(src='../img/icon-seo.png')
               h6 Quảng cáo Google Adwords giúp quý khách tăng cao về doanh số, tiếp cận nhanh tới các khách hàng tiềm năng. Thông qua Google Adwords, dịch vụ sản phẩm của quý khách luôn đứng trên trang 1 google.com, website với 95% người sử dụng internet dùng để tìm kiếm
           
-          .col-lg-4.wow.fadeInUp(data-wow-delay='.5s')
+          .col-lg-4.col-sm-6.d-none.d-lg-block.wow.fadeInUp(data-wow-delay='.5s')
             img(src='../img/bg-seo.png')
           
-          .col-lg-4
+          .col-lg-4.col-sm-6
             .box-seo.text-left.wow.fadeInUp(data-wow-delay='1.6s')
               h5
                 img(src='../img/icon-seo.png')
