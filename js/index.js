@@ -3,6 +3,7 @@ $('.template-carousel').owlCarousel({
   autoplay: true,
   autoplayTimeout: 5000,
   autoplayHoverPause: true,
+  autoplaySpeed: 1000,
   dots: true,
   nav: false,
   items: 2,
@@ -12,7 +13,20 @@ $('.template-carousel').owlCarousel({
     "<i class='mdi mdi-arrow-left'></i>", 
     "<i class='mdi mdi-arrow-right'></i>"
   ],
-  autoplaySpeed: 1000,
+  responsive : {
+    0 : {
+      items: 1
+    },
+    768 : {
+      items: 2, 
+    },
+    992 : {
+      items: 2, 
+    },
+    1450 : {
+      items: 2,
+    }
+  }
 });
 
 wow = new WOW(
@@ -138,6 +152,7 @@ $(document).ready(() => {
       $('.logo-white').removeClass('d-none');
       $('.logo-black').addClass('d-none');
       $('.menu .nav li a').removeClass('gray');
+      
     }
   });
 });
