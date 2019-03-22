@@ -323,24 +323,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .about {
   background-position: top;
-}
-.about:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  background: url("../img/bg-body-1.png") 0 0 repeat;
-  -webkit-transition: 10s;
-  transition: 10s;
-  -webkit-transform-origin: 0% 0% 0px;
-  transform-origin: 0% 0% 0px;
-}
-.about:hover:before {
-  -webkit-transform: translate(-1%, -1%) scale(1.15);
-  transform: translate(-1%, -1%) scale(1.15);
+  background: url("../img/bg-body-1.png");
 }
 .about-zone {
   width: 900px;
@@ -380,21 +363,8 @@ body::-webkit-scrollbar-thumb:hover {
   transform: translate(-50%, -50%);
 }
 
-.design:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  background: url("../img/bg-body-2.png") 0 0 repeat;
-  -webkit-transition: 10s;
-  transition: 10s;
-}
-.design:hover:before {
-  -webkit-transform: translate(-1%, -1%) scale(1.15);
-  transform: translate(-1%, -1%) scale(1.15);
+.design {
+  background: url("../img/bg-body-2.png");
 }
 .design-zone {
   width: 1230px;
@@ -504,22 +474,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .seo {
   background-position: bottom;
-}
-.seo:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  background: url("../img/bg-body-3.png") 0 0 repeat;
-  -webkit-transition: 10s;
-  transition: 10s;
-}
-.seo:hover:before {
-  -webkit-transform: translate(-1%, -1%) scale(1.15);
-  transform: translate(-1%, -1%) scale(1.15);
+  background: url("../img/bg-body-3.png");
 }
 .seo .title-page h1 {
   margin-bottom: 10vh;
@@ -574,22 +529,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .hosting {
   margin: 0 15px;
-}
-.hosting:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  background: url("../img/bg-body-4.png") 0 0 repeat;
-  -webkit-transition: 10s;
-  transition: 10s;
-}
-.hosting:hover:before {
-  -webkit-transform: translate(-1%, -1%) scale(1.15);
-  transform: translate(-1%, -1%) scale(1.15);
+  background: url("../img/bg-body-4.png");
 }
 .hosting-img {
   position: absolute;
@@ -706,21 +646,8 @@ body::-webkit-scrollbar-thumb:hover {
   -webkit-text-fill-color: transparent;
 }
 
-.template:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  background: url("../img/bg-body-5.png") 0 0 repeat;
-  -webkit-transition: 10s;
-  transition: 10s;
-}
-.template:hover:before {
-  -webkit-transform: translate(-1%, -1%) scale(1.15);
-  transform: translate(-1%, -1%) scale(1.15);
+.template {
+  background: url("../img/bg-body-5.png");
 }
 .template-zone {
   width: 100%;
@@ -877,21 +804,8 @@ body::-webkit-scrollbar-thumb:hover {
   -webkit-text-fill-color: transparent;
 }
 
-.contact:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  background: url("../img/bg-body-6.png") 0 0 repeat;
-  -webkit-transition: 10s;
-  transition: 10s;
-}
-.contact:hover:before {
-  -webkit-transform: translate(-1%, -1%) scale(1.15);
-  transform: translate(-1%, -1%) scale(1.15);
+.contact {
+  background: url("../img/bg-body-6.png");
 }
 .contact-zone {
   width: 700px;

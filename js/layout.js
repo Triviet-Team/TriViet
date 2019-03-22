@@ -1,21 +1,3 @@
-$('.template-carousel').owlCarousel({
-  loop: true,
-  autoplay: true,
-  autoplayTimeout: 5000,
-  autoplayHoverPause: true,
-  dots: false,
-  nav: true,
-  items: 1,
-  center:true,
-  autoHeight: true,
-  animateOut: 'fadeOut',
-  animateIn: 'fadeIn',
-  navText: [
-    "<i class='mdi mdi-arrow-left'></i>", 
-    "<i class='mdi mdi-arrow-right'></i>"
-  ],
-  autoplaySpeed: 1000,
-});
 
 $(document).ready(() => {
   const windowWidth = document.body.clientWidth;
@@ -24,16 +6,16 @@ $(document).ready(() => {
   
   // GO TOP
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 300) {
-      $('.menu').addClass('down animated slideInDown');
+    if ($(this).scrollTop() > 0) {
+      $('.menu, .logo, .order').addClass('down');
     } else {
-      $('.menu').removeClass('down animated slideInDown');
+      $('.menu, .logo, .order').removeClass('down');
 
     }
   });
 
   $(".menu a").each( function () {
-    if (url == (this.href)) {
+    if (pageUrl == (this.href)) {
       $(this).closest("a").addClass("active");
     }
   });
@@ -55,5 +37,13 @@ $(document).ready(() => {
 
   $('.category-close').click(() => {
     $('.left').removeClass('active');
+  });
+
+  $('.category h4').click(() => {
+    $('.category ul').toggleClass('active');
+  });
+
+  $('.footer h4').click(function() {
+    $(this).parent().find('ul').toggleClass('active')
   });
 });

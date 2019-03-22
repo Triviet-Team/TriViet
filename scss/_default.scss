@@ -70,8 +70,8 @@ body {
   margin-right: 15px;
   overflow-x: hidden;
   font-weight: 400;
-  font-size: calc(9px + 0.4vmax);
-  background: #f4f4f4;
+  font-size: 14px;
+  background: white;
 
   h1, h2, h3, h4, h5, h6 {
     font-family: inherit;
@@ -109,7 +109,6 @@ body {
     text-decoration: none;
     font-weight: 400;
     color: inherit;
-    cursor: url('../img/pointer.png'), pointer;
   }
 
   a:hover,
@@ -125,7 +124,6 @@ body {
 
   li {
     list-style: none;
-    cursor: url('../img/cursor.png'), auto;
   }
 
   img {
@@ -139,7 +137,6 @@ body {
   section {
     margin-left: -15px !important;
     margin-right: -15px !important;
-    cursor: url('../img/cursor.png'), auto;	
   }
 
 
@@ -178,7 +175,6 @@ body {
 
 .pagination {
   margin-bottom: 10px;
-  margin-top: 30px;
 
   .page-item .page-link {
     background: none;
@@ -204,17 +200,16 @@ body {
 }
 
 .bread-crumb {
-  color: white;
+  color: black;
   margin-bottom: 30px;
   text-align: left;
-  background: #252525;
-  padding: 20px 0;
+  margin-top: 20px;
 
   .breadcrumb {
     background: none;
     padding: 0;
     margin-bottom: 0;
-    justify-content: center;
+    justify-content: left;
 
 
     .breadcrumb-item {
@@ -250,9 +245,22 @@ body {
     border-bottom: 1px solid #383838;
     text-transform: uppercase;
     font-weight: 600;
+
+    i {
+      float: right;
+      font-size: 20px;
+      margin-top: -5px;
+    }
+  }
+
+  img {
+    height: 70px;
+    margin-bottom: 20px;
   }
 
   ul {
+    margin-bottom: 30px;
+
     li {
       margin-bottom: 15px;
       color: #ccc;
@@ -282,28 +290,5 @@ body {
     &:hover {
       color: $main_color;
     }
-  }
-
-  .social {
-    ul {
-      margin-top: 15px;
-    }
-    
-    img {
-      width: 200px;
-    }
-  }
-
-  .contact {
-    h5 {
-      font-weight: 600;
-      margin-bottom: 15px; 
-    }
-  }
-
-  .copyright {
-    margin-top: 15px;
-    padding: 10px 0;
-    border-top: 1px solid #383838;
   }
 }
