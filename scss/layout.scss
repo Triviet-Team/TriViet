@@ -47,7 +47,17 @@ $main_color: #1E74DA;
     height: 60px;
 
     .nav {
-      margin: 20px 15px;
+      li {
+        padding: 20px 0;
+
+        ul {
+          top: 60px;
+
+          li {
+            padding: 10px 0;
+          }
+        }
+      }
     }
   }
 
@@ -68,7 +78,6 @@ $main_color: #1E74DA;
   .nav {
     display: block;
     text-align: right;
-    margin: 37px 15px;
     transition: .3s;
 
     &-close {
@@ -76,9 +85,11 @@ $main_color: #1E74DA;
     }
 
     li {
-      -webkit-transition: 0.5s;
-      transition: 0.5s;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
       display: inline-block;
+      position: relative;
+      padding: 40px 0;
 
       a {
         font-size: 14px;
@@ -112,6 +123,41 @@ $main_color: #1E74DA;
 
         &:hover {
           color: $main_color;
+        }
+      }
+
+      &:hover {
+        ul {
+          opacity: 1;
+          visibility: initial;
+          transform: translateY(0);
+        }
+      }
+
+      ul {
+        position: absolute;
+        width: 250px;
+        text-align: left;
+        background: white;
+        border: 1px solid #e1e1e1;
+        box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16);
+        top: 100px;
+        left: -50px;
+        transition: .3s;
+        padding: 10px 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+
+        li {
+          padding: 10px 0;
+          
+          a {
+            text-transform: initial;
+            font-weight: 400;
+            color: #444444;
+            padding: 0 20px;
+          }
         }
       }
     }
@@ -209,6 +255,7 @@ $main_color: #1E74DA;
 
 article {
   padding-top: 100px;
+  min-height: calc(100vh - 280px);
 }
 
 .template-page {
@@ -406,6 +453,41 @@ article {
   }
 }
 
+.hosting-page {
+  margin: 50px 0;
+  
+  .table-responsive {
+    margin-bottom: 30px;
+
+    h4 {
+      padding: 15px 0;
+      width: 100%;
+      background: $main_color;
+      color: white;
+      text-align: center;
+    }
+
+    thead {
+      th {
+        background: $main_color;
+        color: white;
+        text-align: center;
+      }
+    }
+
+    tbody {
+      th {
+        background: #f4f4f4;
+        min-width: 150px;
+      }
+      
+      td {
+        text-align: center;
+        min-width: 100px;
+      }
+    }
+  }
+}
 
 
 // --------------------------------------------------------------------

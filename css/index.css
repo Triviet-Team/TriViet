@@ -1264,6 +1264,16 @@ body::-webkit-scrollbar-thumb:hover {
   }
 }
 @media (max-width: 575px) {
+  body {
+    background-image: url("../img/bg-mobile.png");
+    background-attachment: fixed;
+    background-origin: center;
+  }
+
+  .one-page {
+    background: none !important;
+  }
+
   .menu {
     height: 60px;
   }

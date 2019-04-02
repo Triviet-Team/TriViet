@@ -223,8 +223,14 @@ body .overlay-menu.overlay-in {
 .menu.down {
   height: 60px;
 }
-.menu.down .nav {
-  margin: 20px 15px;
+.menu.down .nav li {
+  padding: 20px 0;
+}
+.menu.down .nav li ul {
+  top: 60px;
+}
+.menu.down .nav li ul li {
+  padding: 10px 0;
 }
 .menu .toggleMenu {
   cursor: pointer;
@@ -241,16 +247,17 @@ body .overlay-menu.overlay-in {
 .menu .nav {
   display: block;
   text-align: right;
-  margin: 37px 15px;
   transition: 0.3s;
 }
 .menu .nav-close {
   display: none;
 }
 .menu .nav li {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   display: inline-block;
+  position: relative;
+  padding: 40px 0;
 }
 .menu .nav li a {
   font-size: 14px;
@@ -272,6 +279,35 @@ body .overlay-menu.overlay-in {
 }
 .menu .nav li a:hover {
   color: #1E74DA;
+}
+.menu .nav li:hover ul {
+  opacity: 1;
+  visibility: initial;
+  transform: translateY(0);
+}
+.menu .nav li ul {
+  position: absolute;
+  width: 250px;
+  text-align: left;
+  background: white;
+  border: 1px solid #e1e1e1;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  top: 100px;
+  left: -50px;
+  transition: 0.3s;
+  padding: 10px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+}
+.menu .nav li ul li {
+  padding: 10px 0;
+}
+.menu .nav li ul li a {
+  text-transform: initial;
+  font-weight: 400;
+  color: #444444;
+  padding: 0 20px;
 }
 
 .logo {
@@ -336,6 +372,7 @@ body .overlay-menu.overlay-in {
 
 article {
   padding-top: 100px;
+  min-height: calc(100vh - 280px);
 }
 
 .template-page {
@@ -496,6 +533,33 @@ article {
   height: 100px;
 }
 
+.hosting-page {
+  margin: 50px 0;
+}
+.hosting-page .table-responsive {
+  margin-bottom: 30px;
+}
+.hosting-page .table-responsive h4 {
+  padding: 15px 0;
+  width: 100%;
+  background: #1E74DA;
+  color: white;
+  text-align: center;
+}
+.hosting-page .table-responsive thead th {
+  background: #1E74DA;
+  color: white;
+  text-align: center;
+}
+.hosting-page .table-responsive tbody th {
+  background: #f4f4f4;
+  min-width: 150px;
+}
+.hosting-page .table-responsive tbody td {
+  text-align: center;
+  min-width: 100px;
+}
+
 @media (max-width: 1260px) {
   .menu .nav li a {
     padding: 0 12px;
@@ -521,15 +585,16 @@ article {
     z-index: 1;
     width: 40px;
     height: 40px;
+    line-height: 40px;
     text-align: center;
-    border: 2px solid #1E74DA;
-    border-radius: 5px;
+    background: #1E74DA;
+    border-radius: 3px;
     top: 30px;
     margin: 0;
   }
   .menu .toggleMenu i {
     font-size: 24px;
-    color: #1E74DA;
+    color: white;
   }
   .menu .nav {
     width: 300px;
@@ -566,12 +631,33 @@ article {
   }
   .menu .nav li {
     display: block;
+    padding: 0;
     padding-bottom: 30px;
+  }
+  .menu .nav li:hover ul {
+    position: relative;
   }
   .menu .nav li a {
     color: black;
     font-size: 16px;
     text-transform: initial;
+  }
+  .menu .nav li ul {
+    left: 0;
+    width: 300px;
+    border: 0;
+    box-shadow: none;
+    top: 0;
+    padding: 0;
+    margin-top: 5px;
+    margin-bottom: -25px;
+    border-left: 1px solid #e1e1e1;
+    margin-left: 15px;
+  }
+  .menu .nav li ul li a {
+    font-size: 14px;
+    color: #444444;
+    padding: 0 10px;
   }
 }
 @media (max-width: 992px) {
@@ -655,8 +741,9 @@ article {
     top: 10px;
     right: 50px;
     width: 150px;
-    background: #1E74DA;
-    border: 0;
+    background: none;
+    border: 2px solid #1E74DA;
+    line-height: 38px;
   }
   .order:hover {
     background: #1E74DA;
@@ -669,7 +756,7 @@ article {
   }
   .order a {
     font-size: 13.5px;
-    color: white;
+    color: #1E74DA;
   }
 
   .footer ul {

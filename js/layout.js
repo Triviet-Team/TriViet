@@ -46,4 +46,10 @@ $(document).ready(() => {
   $('.footer h4').click(function() {
     $(this).parent().find('ul').toggleClass('active')
   });
+
+  if (windowWidth < 1200) {
+    $('.menu .nav-link').parent().find('ul').filter(function() {
+      $(this).parent().find('.nav-link').removeAttr('href');
+    });
+  }
 });
